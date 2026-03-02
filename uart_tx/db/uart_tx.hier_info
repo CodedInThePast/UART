@@ -1,0 +1,45 @@
+|uart_tx
+clk_3125 => tx_done~reg0.CLK
+clk_3125 => sr[0].CLK
+clk_3125 => sr[1].CLK
+clk_3125 => sr[2].CLK
+clk_3125 => sr[3].CLK
+clk_3125 => sr[4].CLK
+clk_3125 => sr[5].CLK
+clk_3125 => sr[6].CLK
+clk_3125 => sr[7].CLK
+clk_3125 => sr[8].CLK
+clk_3125 => sr[9].CLK
+clk_3125 => sr[10].CLK
+parity_type => parity_bit.OUTPUTSELECT
+tx_start => sr.OUTPUTSELECT
+tx_start => sr.OUTPUTSELECT
+tx_start => sr.OUTPUTSELECT
+tx_start => sr.OUTPUTSELECT
+tx_start => sr.OUTPUTSELECT
+tx_start => sr.OUTPUTSELECT
+tx_start => sr.OUTPUTSELECT
+tx_start => sr.OUTPUTSELECT
+tx_start => sr.OUTPUTSELECT
+tx_start => sr.OUTPUTSELECT
+tx_start => sr.OUTPUTSELECT
+data[0] => WideXor0.IN0
+data[0] => Mux0.IN3
+data[1] => WideXor0.IN1
+data[1] => Mux0.IN4
+data[2] => WideXor0.IN2
+data[2] => Mux0.IN5
+data[3] => WideXor0.IN3
+data[3] => Mux0.IN6
+data[4] => WideXor0.IN4
+data[4] => Mux0.IN7
+data[5] => WideXor0.IN5
+data[5] => Mux0.IN8
+data[6] => WideXor0.IN6
+data[6] => Mux0.IN9
+data[7] => WideXor0.IN7
+data[7] => Mux0.IN10
+tx <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+tx_done <= tx_done~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
